@@ -7,7 +7,7 @@ import Signup from "./components/PublicContent/Signup.js";
 import UsersList from "./components/GatedContent/UsersList.js";
 import "./App.css";
 
-axios.defaults.baseURL = process.env.API_URL || "http://localhost:3000/";
+axios.defaults.baseURL = process.env.API_URL || "http://localhost:5555/";
 
 class App extends Component {
   render() {

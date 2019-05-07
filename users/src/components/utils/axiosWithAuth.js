@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/";
+axios.defaults.baseURL = "http://localhost:5555/";
 
 axios.interceptors.request.use(function(requestConfig) {
   //   const token = localStorage.getItem("password");

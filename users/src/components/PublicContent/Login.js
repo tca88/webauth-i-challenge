@@ -14,7 +14,7 @@ class Login extends Component {
   handleLogin = event => {
     event.preventDefault();
 
-    const endpoint = "http://localhost:3000/api/login";
+    const endpoint = "http://localhost:5555/api/auth/login";
     axios
       .post(endpoint, this.state)
       .then(res => {
