@@ -8,9 +8,14 @@ router.post("/", (req, res) => {
   Users.findBy({ username })
     .first()
     .then(user => {
+      console.log("b", user.password);
+      console.log("pw", password);
+      console.log("bcrypt", bcrypt.compareSync(password, user.password));
       // if you find the user and compare the hash to the hash to check authentication
       if (user && bcrypt.compareSync(password, user.password)) {
-        res.status(200).json({ message: `Welcome ${user.username}!` });
+        res
+          .status(200)
+          .json({ username: user.username, password: user.password });
       } else {
         res.status(401).json({ message: "Invalid Credentials" });
       }

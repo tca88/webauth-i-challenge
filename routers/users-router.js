@@ -6,6 +6,7 @@ const protected = require("../auth/protected-middleware.js");
 router.get("/", protected, (req, res) => {
   Users.find()
     .then(users => {
+      console.log(users);
       res.json(users);
     })
     .catch(err => res.send(err));
